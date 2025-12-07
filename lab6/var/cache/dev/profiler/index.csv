@@ -1,0 +1,10 @@
+906e33,::1,GET,http://localhost:8000/,1764419939,,404
+0b8b77,::1,GET,http://localhost:8000/register,1764419949,,200
+4e0327,::1,GET,http://localhost:8000/register,1764419979,c269dc,500
+c269dc,::1,POST,http://localhost:8000/register,1764419979,,500
+5681c2,::1,GET,http://localhost:8000/,1764420392,,404
+cffe3d,::1,GET,http://localhost:8000/register,1764420402,,200
+f3b744,::1,POST,http://localhost:8000/register,1764420414,,200
+2b1feb,::1,GET,http://localhost:8000/login,1764420426,,200
+20dc29,::1,POST,http://localhost:8000/login,1764420429,,302
+1813a7,::1,GET,http://localhost:8000/voitures,1764420430,,200
