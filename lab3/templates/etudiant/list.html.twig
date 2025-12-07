@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width device-width, initial-scale 1.0">
+   <title>list of student</title>
+</head>
+<style>
+   table, th, td {
+       border: 1px solid black;
+       border-collapse: collapse; 
+       padding: 8px; 
+    }
+</style>
+
+<body>
+<h1>Liste des Étudiants</h1>
+
+{% if etudiants is empty %}
+<p style="color: red;">Le tableau est vide</p>
+{% else %}
+<ul>
+  {% for etudiant in etudiants %}
+    <li>{{ etudiant|upper }}</li>
+{% endfor %}
+</ul>
+{% endif %}
+
+<table>
+   <thead>
+      <tr>
+          <h2>Liste des modules </h2>
+              <th>ID</th>
+              <th>Nom</th>
+              <th>Enseignant</th>
+              <th>Heures</th>
+              <th>Date</th>
+              <th>Affectation</th>
+      </tr>
+   </thead>
+   <tbody>
+{% for module in listeModules %}
+      <tr>
+         <td>{{ module.id }}</td>
+         <td>{{ module.nom }}</td>
+         <td>{{ module.enseignant }}</td>
+         <td>{{ module.nbrHeures }}</td>
+         <td>{{ module.date }}</td>
+         <td><a href="{{ path('affectation') }}">Affectation</a></td>
+      </tr>
+{% endfor %}
+    </tbody>
+</table>
+</body>
+</html>
